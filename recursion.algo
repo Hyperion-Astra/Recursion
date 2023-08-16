@@ -1,0 +1,32 @@
+// FUNCTION palindrome_word(arr:palindrome_word) : Reverse_Word
+// VAR
+//     word = word.lower()  // Convert to lowercase for case insensitivity
+// BEGIN
+//     left = 0
+//     right = len(word) - 1
+    
+//     while left <= right:
+//         if word[left] != word[right]:
+//             RETURN False;
+//         ELSE
+//         left += 1
+//         right -= 1
+//     END_IF
+//     RETURN True;
+// END
+
+ALGORITHM is_palindrome(word)
+VAR
+    is_pal : BOOLEAN;
+BEGIN
+    IF (word.length <= 1) THEN
+        is_pal = true
+        return is_pal;
+    ELSE_IF (word[0] == word[word.length-1]) THEN
+        word = word.splice(first and last letter);
+        return is_palindrome(word)
+    ELSE
+        is_pal = false;
+        return is_pal
+    END_IF
+END
